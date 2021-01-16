@@ -1,0 +1,65 @@
+D:\Projects\WpfApp1901\WpfApp1901\bin\Debug\WpfApp1901.exe
+D:\Projects\WpfApp1901\WpfApp1901\bin\Debug\WpfApp1901.pdb
+D:\Projects\WpfApp1901\WpfApp1901\bin\Debug\WpfApp1901.xml
+D:\Projects\WpfApp1901\WpfApp1901\obj\Debug\MainWindow.baml
+D:\Projects\WpfApp1901\WpfApp1901\obj\Debug\MainWindow.g.vb
+D:\Projects\WpfApp1901\WpfApp1901\obj\Debug\Application.g.vb
+D:\Projects\WpfApp1901\WpfApp1901\obj\Debug\WpfApp1901_MarkupCompile.cache
+D:\Projects\WpfApp1901\WpfApp1901\obj\Debug\WpfApp1901.g.resources
+D:\Projects\WpfApp1901\WpfApp1901\obj\Debug\WpfApp1901.Resources.resources
+D:\Projects\WpfApp1901\WpfApp1901\obj\Debug\WpfApp1901.vbproj.GenerateResource.Cache
+D:\Projects\WpfApp1901\WpfApp1901\obj\Debug\WpfApp1901.exe
+D:\Projects\WpfApp1901\WpfApp1901\obj\Debug\WpfApp1901.xml
+D:\Projects\WpfApp1901\WpfApp1901\obj\Debug\WpfApp1901.pdb
+D:\fanavard\WpfApp1901\WpfApp1901\obj\Debug\WpfApp1901.exe
+D:\fanavard\WpfApp1901\WpfApp1901\obj\Debug\WpfApp1901.xml
+D:\fanavard\WpfApp1901\WpfApp1901\obj\Debug\WpfApp1901.pdb
+D:\fanavard\WpfApp1901\WpfApp1901\bin\Debug\WpfApp1901.exe
+D:\fanavard\WpfApp1901\WpfApp1901\bin\Debug\WpfApp1901.pdb
+D:\fanavard\WpfApp1901\WpfApp1901\bin\Debug\WpfApp1901.xml
+D:\fanavard\WpfApp1901\WpfApp1901\obj\Debug\MainWindow.baml
+D:\fanavard\WpfApp1901\WpfApp1901\obj\Debug\MainWindow.g.vb
+D:\fanavard\WpfApp1901\WpfApp1901\obj\Debug\Application.g.vb
+D:\fanavard\WpfApp1901\WpfApp1901\obj\Debug\WpfApp1901_MarkupCompile.cache
+D:\fanavard\WpfApp1901\WpfApp1901\obj\Debug\WpfApp1901.g.resources
+D:\fanavard\WpfApp1901\WpfApp1901\obj\Debug\WpfApp1901.Resources.resources
+D:\fanavard\WpfApp1901\WpfApp1901\obj\Debug\WpfApp1901.vbproj.GenerateResource.Cache
+D:\fanavard\WpfApp1903\WpfApp1901\obj\Debug\WpfApp1901.exe
+D:\fanavard\WpfApp1903\WpfApp1901\obj\Debug\WpfApp1901.xml
+D:\fanavard\WpfApp1903\WpfApp1901\obj\Debug\WpfApp1901.pdb
+D:\fanavard\WpfApp1903\WpfApp1901\bin\Debug\WpfApp1901.exe
+D:\fanavard\WpfApp1903\WpfApp1901\bin\Debug\WpfApp1901.pdb
+D:\fanavard\WpfApp1903\WpfApp1901\bin\Debug\WpfApp1901.xml
+D:\fanavard\WpfApp1903\WpfApp1901\obj\Debug\MainWindow.baml
+D:\fanavard\WpfApp1903\WpfApp1901\obj\Debug\MainWindow.g.vb
+D:\fanavard\WpfApp1903\WpfApp1901\obj\Debug\Application.g.vb
+D:\fanavard\WpfApp1903\WpfApp1901\obj\Debug\WpfApp1901_MarkupCompile.cache
+D:\fanavard\WpfApp1903\WpfApp1901\obj\Debug\WpfApp1901.g.resources
+D:\fanavard\WpfApp1903\WpfApp1901\obj\Debug\WpfApp1901.Resources.resources
+D:\fanavard\WpfApp1903\WpfApp1901\obj\Debug\WpfApp1901.vbproj.GenerateResource.Cache
+D:\fanavard\WpfApp1903 - Copy\WpfApp1901\obj\Debug\WpfApp1901.exe
+D:\fanavard\WpfApp1903 - Copy\WpfApp1901\obj\Debug\WpfApp1901.xml
+D:\fanavard\WpfApp1903 - Copy\WpfApp1901\obj\Debug\WpfApp1901.pdb
+D:\fanavard\WpfApp1903 - Copy\WpfApp1901\bin\Debug\WpfApp1901.exe
+D:\fanavard\WpfApp1903 - Copy\WpfApp1901\bin\Debug\WpfApp1901.pdb
+D:\fanavard\WpfApp1903 - Copy\WpfApp1901\bin\Debug\WpfApp1901.xml
+D:\fanavard\WpfApp1903 - Copy\WpfApp1901\obj\Debug\MainWindow.baml
+D:\fanavard\WpfApp1903 - Copy\WpfApp1901\obj\Debug\MainWindow.g.vb
+D:\fanavard\WpfApp1903 - Copy\WpfApp1901\obj\Debug\Application.g.vb
+D:\fanavard\WpfApp1903 - Copy\WpfApp1901\obj\Debug\WpfApp1901_MarkupCompile.cache
+D:\fanavard\WpfApp1903 - Copy\WpfApp1901\obj\Debug\WpfApp1901.g.resources
+D:\fanavard\WpfApp1903 - Copy\WpfApp1901\obj\Debug\WpfApp1901.Resources.resources
+D:\fanavard\WpfApp1903 - Copy\WpfApp1901\obj\Debug\WpfApp1901.vbproj.GenerateResource.Cache
+D:\fanavard\WpfApp1904\WpfApp1901\obj\Debug\WpfApp1901.xml
+D:\fanavard\WpfApp1904\WpfApp1901\obj\Debug\WpfApp1901.pdb
+D:\fanavard\WpfApp1904\WpfApp1901\bin\Debug\WpfApp1901.exe
+D:\fanavard\WpfApp1904\WpfApp1901\bin\Debug\WpfApp1901.pdb
+D:\fanavard\WpfApp1904\WpfApp1901\bin\Debug\WpfApp1901.xml
+D:\fanavard\WpfApp1904\WpfApp1901\obj\Debug\MainWindow.baml
+D:\fanavard\WpfApp1904\WpfApp1901\obj\Debug\MainWindow.g.vb
+D:\fanavard\WpfApp1904\WpfApp1901\obj\Debug\Application.g.vb
+D:\fanavard\WpfApp1904\WpfApp1901\obj\Debug\WpfApp1901_MarkupCompile.cache
+D:\fanavard\WpfApp1904\WpfApp1901\obj\Debug\WpfApp1901.g.resources
+D:\fanavard\WpfApp1904\WpfApp1901\obj\Debug\WpfApp1901.Resources.resources
+D:\fanavard\WpfApp1904\WpfApp1901\obj\Debug\WpfApp1901.vbproj.GenerateResource.Cache
+D:\fanavard\WpfApp1904\WpfApp1901\obj\Debug\WpfApp1901.exe
