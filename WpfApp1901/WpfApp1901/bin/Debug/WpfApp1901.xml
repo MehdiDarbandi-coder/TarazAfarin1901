@@ -6,15 +6,7 @@ WpfApp1901
 </name>
 </assembly>
 <members>
-<member name="M:WpfApp1901.MainWindow.InitializeComponent">
-	<summary>
-InitializeComponent
-</summary>
-</member><member name="T:WpfApp1901.MainWindow">
-	<summary>
-MainWindow
-</summary>
-</member><member name="M:WpfApp1901.Application.InitializeComponent">
+<member name="M:WpfApp1901.Application.InitializeComponent">
 	<summary>
 InitializeComponent
 </summary>
@@ -25,6 +17,14 @@ Application Entry Point.
 </member><member name="T:WpfApp1901.Application">
 	<summary>
 Application
+</summary>
+</member><member name="M:WpfApp1901.MainWindow.InitializeComponent">
+	<summary>
+InitializeComponent
+</summary>
+</member><member name="T:WpfApp1901.MainWindow">
+	<summary>
+MainWindow
 </summary>
 </member><member name="P:WpfApp1901.My.Resources.Resources.ResourceManager">
 	<summary>

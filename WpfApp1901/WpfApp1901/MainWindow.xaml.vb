@@ -4,54 +4,63 @@ Class MainWindow
     Private Property n As Long  'تعداد شی
     Private Property m As Long  'تعداد جعبه
     Private Property K As Double  'اندازه جعبه
+    Private Property Obj As Double() 'اندازه اشیاء
 
-    Private Sub ButSave_Click(sender As Object, e As RoutedEventArgs)
+    Private Sub ButSave_Click()
 
         Me.txtResult.Text = String.Empty
-
-        Dim _Objectss() = Me.CrateObj()
-        If IsNothing(_Objectss) Then
+        If Me.Validation = False Then
             Exit Sub
         End If
 
-        Dim Total = m * K
-        Dim CurTotal As Long = 0
-        Dim start As Long = 0
-        For i As Long = 0 To _Objectss.Length - 1
-            CurTotal += _Objectss(_Objectss.Length - i - 1).Size
-            If CurTotal > Total Then
-                start = i
-                Exit For
-            End If
-        Next
 
-        For j As Long = start To _Objectss.Length - 1
-            If IsTrueAlgo(j, _Objectss) = True Then
-                Me.txtResult.Text = _Objectss.Length - j
+        If IsNothing(Me.Obj) Then
+            Exit Sub
+        End If
+
+        'GetStartIndex
+        Dim StartIndex As Long = GetStartIndex()
+
+
+        For j As Long = StartIndex To Me.Obj.Length - 1
+            If IsTrueAlgo(j) = True Then
+                Me.txtResult.Text = Me.Obj.Length - j
                 Me.ButPrint.IsEnabled = True
                 Exit Sub
             End If
-
         Next
     End Sub
-    Private Function IsTrueAlgo(_CurIndex As Long, _Objectss() As CObject) As Boolean
+    Private Function GetStartIndex() As Long
+        Dim Total = m * K
+        Dim CurTotal As Double = 0
+        For i As Long = 0 To Me.Obj.Length - 1
+            CurTotal += Me.Obj(Me.Obj.Length - i - 1)
+            If CurTotal > Total Then
+                Return Me.Obj.Length - i - 1
+                Exit For
+            End If
+        Next
+        Return 0
+    End Function
+    Private Function IsTrueAlgo(_CurIndex As Long) As Boolean
         'k ≥ ai ≥ 1
-        If _CurIndex + 1 > _Objectss.Length Then
+        If _CurIndex + 1 > Me.Obj.Length Then
             Return True
         End If
 
+
+        Dim Curm As Long = 1 'مشخصه جعبه جاری
+        Dim j As Long  'مشخصه شیء جاری
         Dim CurFreeK = K 'فضای باقیمانده جعبه جاری
-        Dim Curm As Long = 1 'شماره جعبه جاری
-        Dim j As Long  'شماره شیء جاری
-        For j = _CurIndex To _Objectss.Length - 1
+        For j = _CurIndex To Me.Obj.Length - 1
             'کنترل اتمام جعبه ها
             If Curm > m Then
                 Return False
             End If
             'کنترل موجود بودن جای خالی
-            If _Objectss(j).Size <= CurFreeK Then
+            If Me.Obj(j) <= CurFreeK Then
                 'مقدار دهی فضای  باقیمانده جعبه جاری
-                CurFreeK -= _Objectss(j).Size
+                CurFreeK -= Me.Obj(j)
             Else
                 j -= 1
                 Curm += 1 'به سراغ شیئ بعدی می رویم
@@ -111,7 +120,6 @@ Class MainWindow
 
 
             If Me.m < 1 Then
-
                 Return New ValidationResult(False, "!تعداد جعبه نمی تواند کوچکتر از صفر باشد")
             End If
 
@@ -158,6 +166,9 @@ Class MainWindow
                 Return New ValidationResult(False, "!تعداد اندازه اشیاء باید با تعداد شیء برابر باشد" & "تعداد شیء " & Me.n & " تعداد اندازه اشیاء " & _SizeObjects.Length)
             End If
 
+            Me.Obj = New Double(_SizeObjects.Length - 1) {}
+
+           
 
             For i As Long = 0 To _SizeObjects.Length - 1
                 If String.IsNullOrEmpty(_SizeObjects(i)) Then
@@ -174,6 +185,8 @@ Class MainWindow
                 If _SizeObjects(i) > K Then
                     Return New ValidationResult(False, "!اندازه شیء شماره " & i + 1 & " نمی تواند بزرگتر از اندازه جعبه باشد")
                 End If
+
+                Me.Obj(i) = _SizeObjects(i)
             Next
 
 
@@ -183,7 +196,7 @@ Class MainWindow
         End Try
        
     End Function
-    Private Function IsTrueinput() As Boolean
+    Private Function Validation() As Boolean
         Dim _ValidationResult As ValidationResult
 
         _ValidationResult = Me.Validation_n()
@@ -220,18 +233,7 @@ Class MainWindow
     End Function
 #End Region
    
-    Private Function CrateObj() As CObject()
-
-        If IsTrueinput() = False Then
-            Return Nothing
-        End If
-        Dim _Objectss(CLng(txtn.Text) - 1) As CObject
-        Dim _SizeObjects = Me.txta.Text.Split(",")
-        For i As Long = 0 To _Objectss.Length - 1
-            _Objectss(i) = New CObject(_SizeObjects(i))
-        Next
-        Return _Objectss
-    End Function
+    
 
 
 
@@ -290,9 +292,9 @@ Class MainWindow
         Return flowDoc
     End Function
 
-    Private Sub ButPrint_Click(sender As Object, e As RoutedEventArgs)
+    Private Sub ButPrint_Click()
         If Not String.IsNullOrEmpty(Me.txtResult.Text) Then
-            PrintResult()
+            Me.PrintResult()
         End If
 
     End Sub
@@ -308,11 +310,6 @@ Class MainWindow
         If txt.Equals(txtn) Then
             _ValidationResult = Me.Validation_n()
             Me.LblErorn.Content = _ValidationResult.ErrorContent
-            If Not String.IsNullOrEmpty(Me.txta.Text) Then
-                _ValidationResult = Me.Validation_a()
-                Me.LblErora.Content = _ValidationResult.ErrorContent
-            End If
-           
         End If
         If txt.Equals(txtm) Then
             _ValidationResult = Me.Validation_m()
@@ -321,10 +318,6 @@ Class MainWindow
         If txt.Equals(txtk) Then
             _ValidationResult = Me.Validation_K()
             Me.LblErork.Content = _ValidationResult.ErrorContent
-            If Not String.IsNullOrEmpty(Me.txta.Text) Then
-                _ValidationResult = Me.Validation_a()
-                Me.LblErora.Content = _ValidationResult.ErrorContent
-            End If
         End If
 
         If txt.Equals(txta) Then
@@ -332,8 +325,13 @@ Class MainWindow
             Me.LblErora.Content = _ValidationResult.ErrorContent
         End If
 
+        
         If IsNothing(Me.LblErorn.Content) And IsNothing(Me.LblErorm.Content) And IsNothing(Me.LblErork.Content) And IsNothing(Me.LblErora.Content) Then
-            Me.ButSave.IsEnabled = True
+            If Not String.IsNullOrEmpty(Me.txtn.Text) And Not String.IsNullOrEmpty(Me.txtm.Text) And Not String.IsNullOrEmpty(Me.txtk.Text) And Not String.IsNullOrEmpty(Me.txta.Text) Then
+                Me.ButSave.IsEnabled = True
+            Else
+                Me.ButSave.IsEnabled = False
+            End If
         Else
             Me.ButSave.IsEnabled = False
         End If
